@@ -1,0 +1,7 @@
+Django
+numpy
+pandas
+yfinance
+openpyxl
+wget
+flask
