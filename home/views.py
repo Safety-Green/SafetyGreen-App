@@ -4,6 +4,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login
 
 def index(request):
-    return HttpResponse("informe seu cpf e sua senha para acessar sua dashboard")
+    return render(request, "homepage.html")
+    #return HttpResponse("informe seu cpf e sua senha para acessar sua dashboard")
 
 
