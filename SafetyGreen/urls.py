@@ -1,9 +1,8 @@
 from django.contrib import admin
 from django.urls import path, include
 
-from SafetyGreen import views
-
 urlpatterns = [
-    path('', views.opp),
+    path('login/', include('login.urls')),
+    path('', include('login.urls')),
     path('admin/', admin.site.urls),
 ]
