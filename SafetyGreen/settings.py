@@ -13,7 +13,7 @@ SECRET_KEY = 'django-insecure-epl$7p8igs2xa1x8fdls^i$pa*6-^&c&@w4fb!-5+7a*r1e^at
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["89.116.225.1"]
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -43,7 +43,7 @@ ROOT_URLCONF = 'SafetyGreen.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ["templates"],
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -64,8 +64,12 @@ WSGI_APPLICATION = 'SafetyGreen.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'django-app-db',
+        'USER': 'root',
+        'PASSWORD': '',
+        'HOST': 'db',
+        'PORT': '3306',
     }
 }
 

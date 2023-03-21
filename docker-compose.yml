@@ -5,10 +5,10 @@ services:
     command: --default-authentication-plugin=mysql_native_password
     restart: always
     environment:
-      MYSQL_DATABASE: mydb
-      MYSQL_USER: root
-      MYSQL_PASSWORD: mypass
-      MYSQL_ROOT_PASSWORD: mypass
+      MYSQL_DATABASE: 'django-app-db'
+      MYSQL_ALLOW_EMPTY_PASSWORD: 'true'
+    volumes:
+      - ./data/mysql/dbb:/var/lib/mysql
     ports:
       - "3306:3306"
   web:

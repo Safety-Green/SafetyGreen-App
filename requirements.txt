@@ -9,3 +9,5 @@ asgiref
 pytz
 sqlparse
 psycopg2-binary
+mysql.connector
+mysqlclient
