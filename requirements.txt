@@ -5,3 +5,7 @@ yfinance
 openpyxl
 wget
 flask
+asgiref
+pytz
+sqlparse
+psycopg2-binary

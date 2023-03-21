@@ -1,3 +1,7 @@
+FROM mysql:8
+ENV MYSQL_ROOT_PASSWORD 100senha
+COPY ./data.sql /docker-entrypoint-initdb.d/data.sql
+
 FROM python:latest
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
